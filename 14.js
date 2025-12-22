@@ -20,11 +20,11 @@ const ADMIN_PASSWORD = "nissangtrr34";  // ← Tu contraseña admin
 // Cargar y mostrar registros al abrir la página (solo si es admin)
 mostrarRegistrosSiAdmin();
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     if (document.getElementById('password1').value !== document.getElementById('password2').value) {
-        alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+        alert('Las contraseñas no coinciden.');
         return;
     }
 
@@ -32,22 +32,29 @@ form.addEventListener('submit', function (e) {
     const intereses = Array.from(interesesChecks).map(check => check.value);
 
     const registro = {
-        fecha: new Date().toLocaleString(),
         usuario: document.getElementById('fname').value.trim(),
-        fechaNac: document.getElementById('fechaNac').value,
         email: document.getElementById('email').value.trim(),
-        password: simpleHash(document.getElementById('password1').value),
-        intereses: intereses.length > 0 ? intereses : ['Ninguno seleccionado'],
-        avatar: ''  // Por si quieres avatars también aquí en el futuro
+        intereses: intereses,
+        avatar: document.getElementById('avatar')?.value || ''
     };
 
-    let lista = JSON.parse(localStorage.getItem('registrosUsuarios') || '[]');
-    lista.unshift(registro);
-    localStorage.setItem('registrosUsuarios', JSON.stringify(lista));
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxD5OSpGk1FCBAvULASbitUN-OowtdhGR0PtqpsLWdEisi2ABpE9m9beupgz7eNcNzTMg/exec', {
+            method: 'POST',
+            body: JSON.stringify(registro),
+            headers: { 'Content-Type': 'text/plain' }
+        });
 
-    mostrarRegistrosSiAdmin();
-    form.reset();
-    alert('¡Registro guardado correctamente!');
+        const result = await response.json();
+        if (result.status === 'success') {
+            alert('¡Registro guardado en la comunidad global!');
+            form.reset();
+        } else {
+            alert('Error al guardar. Intenta de nuevo.');
+        }
+    } catch (error) {
+        alert('Error de conexión. Intenta más tarde.');
+    }
 });
 
 function mostrarRegistrosSiAdmin() {
