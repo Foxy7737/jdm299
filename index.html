@@ -3,43 +3,15 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Página web sobre coches JDM, películas y videojuegos de automóviles">
-  <meta name="keywords" content="JDM, coches japoneses, GT-R, Supra, Fast and Furious, carreras">
   <title>JDM World - Coches Japoneses, Películas y Videojuegos</title>
   <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/x-icon">
   <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600&display=swap"
-    rel="stylesheet">
-  <meta property="og:title" content="JDM World - Coches japoneses, películas y videojuegos">
-  <meta property="og:image" content="https://tuweb.com/Imagenes/preview.jpg">
-  <!-- SEO avanzado 2025 -->
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Tu nick o nombre">
-
-  <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
-  <meta property="og:title" content="JDM World - Nissan GT-R R34">
-  <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
-  <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
-  <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
-  <meta property="og:type" content="article">
 </head>
 
 <body>
-  <!--Este codigo es para una animacion al abrir la pagina-->
-  <div id="jdmLoader">
-    <div class="loader-content">
-      <div class="neon-car"></div>
-      <div class="loading-text">Cargando nitro... 💨</div>
-      <div class="progress-bar"></div>
-    </div>
-  </div>
   <!--Este codigo es una barra de tarreas horizontal-->
   <nav class="barra">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul id="menu">
+    <ul>
       <li><a href="index.html">Inicio</a></li>
       <li class="dropdown">
         <a class="dropbtn">Peliculas</a>
@@ -74,38 +46,17 @@
           <a href="Prueba 14.html">Registrarse</a>
         </div>
       </li>
-      <li><a href="Prueba 15.html">Usuario</a></li>
     </ul>
-    <div class="audio-player">
-      <audio id="background-audio" loop>
-        <source src="/Audios/bandoleros.ogg" type="audio/ogg">
-        Tu navegador no soporta audio.
-      </audio>
-      <button id="audio-toggle" class="audio-btn">
-        🔊 Música ON
-      </button><br>
-      <button id="darkModeToggle"
-        style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
-    </div>
   </nav>
   <!-- Contenido personalizado según intereses -->
   <div id="personalizado" style="text-align: center; margin: 20px 0;"></div>
   <header class="inicio">
     <img class="jdm" src="Imagenes/logo jdm.png" width="30%">
   </header>
-  <!-- Estadísticas de fans -->
-  <div id="estadisticasFans"
-    style="text-align: center; margin: 40px 0; padding: 20px; background: rgba(255,107,0,0.1); border-radius: 12px;">
-    <h3 style="color:#ff6b00;">📊 Estadísticas de la Comunidad JDM</h3>
-    <div id="statsContent" style="font-size:18px; margin:20px 0;">
-      Cargando estadísticas...
-    </div>
-  </div>
   <!--Este h1 es el titulo de la pagina wed y la i es el estilo de la letra que esta en cursiva-->
   <i>
-    <h1>Japanese domestic market(JDM)</h1>
+    <h1 class="glitch">Japanese domestic market(JDM)</h1>
   </i>
-  <div id="progressBar"></div>
   <!--Esta b es para que la letra este en negrita-->
   <p class="pagina"><i>El <b><i>japanese domestic market </b>(<b>JDM</b>, en español: <b>mercado interno japonés</b>) es
       el término es
@@ -184,11 +135,11 @@
   </p></i><br>
   <!--Esto es un codigo para crear un boton y centrar el texto-->
   <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Japanese_domestic_market" target="_blank"
-      class="button button3">Wikipedia</a>
+      class="button button3 btn-neon">Wikipedia</a>
   </div><br>
   <!--Esto es un codigo de un gif-->
   <div style="text-align: center;"><img src="/Imagenes/juego.gif" alt="Un gtr" width="25%"></div>
-  <section class="personal scroll">
+  <section class="centrar pagina">
     <h2>¿Por qué me gustan los coches?</h2>
 
     <p>
@@ -200,8 +151,8 @@
       Me gusta especialmente el mundo JDM porque mezcla ingeniería, cultura y
       competición. Cada coche tiene una historia y una personalidad propia.
     </p>
-  </section>
-  <section class="personal scroll">
+  </section><br>
+  <section class="centrar pagina">
     <h2>¿Por qué hice esta web?</h2>
     <p>
       Hice esta web porque el mundo del motor siempre me ha llamado la atención.
@@ -232,7 +183,7 @@
       </div>
     </div>
   </section>
-  <section class="personal scroll">
+  <section class="centrar pagina">
     <h2>Cómo empecé en el mundo del motor</h2>
 
     <p>
@@ -245,8 +196,8 @@
       y de ahí nació esta web.
     </p>
   </section>
-  <section class="opinion-visual scroll">
-    <div class="opinion-texto">
+  <section class="centrar pagina">
+    <div>
       <h2>Lo que representan los coches para mí</h2>
       <p>
         Para mí, los coches no son solo un medio de transporte.
@@ -257,13 +208,7 @@
         me gusta del mundo del motor.
       </p>
     </div>
-
-    <div class="opinion-imagen">
-      <img
-        src="https://hips.hearstapps.com/hmg-prod/images/image-2-6426a46bb3e23.jpg?crop=0.8884775566867191xw:1xh;center,top&resize=1200:*"
-        alt="Nissan GT-R JDM">
-    </div>
-  </section>
+  </section><br>
   <h2 id="1">Algunos de esos coches son:</h2>
   <!--Esto es el codigo de una tabla-->
   <table style="width:100%">
@@ -353,6 +298,25 @@
       </td>
     </tr>
   </table>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="coche-slide">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/image-2-6426a46bb3e23.jpg?crop=0.8884775566867191xw:1xh;center,top&resize=1200:*" width="55%" alt="R34">
+        <h3>Nissan GT-R R34</h3>
+        <a href="Prueba 10.html" class="btn-jdm">VER BESTIA →</a>
+      </div>
+      <div class="coche-slide">
+        <img src="https://files.hodoor.world/main/dfefa2fc-519e-43d9-993b-7b8b75a6f724.jpeg" width="75%" alt="Supra">
+        <h3>Toyota Supra MK4</h3>
+        <a href="Prueba 11.html" class="btn-jdm">2JZ POWER →</a>
+      </div>
+     <div class="coche-slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzzoIRdPYio5mtLOIfeuXp3JuLIiyOPx3UQ&s" width="75%" alt="Supra">
+        <h3>Toyota Celica</h3>
+        <a href="Prueba 12.html" class="btn-jdm">Ver coche →</a>
+      </div>
+    </div>
+  </div>
   <h3>
     <p>Estos son algunos temas que hay en la web:</p>
   </h3>
@@ -399,37 +363,56 @@
   <footer class="firma">
     <p>Esta web está hecha por mí, por pasión al mundo del motor 🚗🔥</p>
   </footer>
-  <div class="quiz-container" id="dotted">
-    <h2>Preguntas sobre la web</h2>
-
-    <p>1. ¿De qué va esta página web?</p>
-    <form class="quiz-form">
-      <label><input type="radio" name="q1" data-correct="false"> Va de coches</label><br>
-      <label><input type="radio" name="q1" data-correct="true"> Va de películas y videojuegos de coches</label><br>
-      <label><input type="radio" name="q1" data-correct="false"> VA solo de películas</label><br>
-      <label><input type="radio" name="q1" data-correct="false"> Va solo de coches JDM</label>
+  <div class="container" id="dotted">
+    <h2>Preguntas</h2>
+    <p>1. ¿De que va esta pagina web?</p>
+    <form>
+      <label><input type="radio" name="color" id="incorrecto"> Va de coches
+        <span class="feedback incorrecto">❌</span>
+      </label><br>
+      <label><input type="radio" name="color" id="correcto"> Va de peliculas y videojuegos de coches
+        <span class="feedback correcto">✅</span>
+      </label><br>
+      <label><input type="radio" name="color" id="incorrecto"> VA solo de peliculas
+        <span class="feedback incorrecto">❌</span>
+      </label><br>
+      <label><input type="radio" name="color" id="incorrecto"> Va solo de coches JDM
+        <span class="feedback incorrecto">❌</span>
+      </label>
     </form>
-
-    <p>2. ¿Qué clases de películas hay según las fotos, audios, listas, gifs y videos?</p>
-    <form class="quiz-form">
-      <label><input type="radio" name="q2" data-correct="false"> Cars y Fast and Furious</label><br>
-      <label><input type="radio" name="q2" data-correct="false"> Fast and Furious, F1 y Gran Turismo</label><br>
-      <label><input type="radio" name="q2" data-correct="true"> Fast and Furious, F1, Gran Turismo y Need for
-        Speed</label><br>
-      <label><input type="radio" name="q2" data-correct="false"> Ninguna es correcta</label>
+    <p>2. ¿Que clases de peliculas hay segun las fotos, los audios, las listas, los gifs y los videos?</p>
+    <form>
+      <label><input type="radio" name="color" id="incorrecto">Cars y Fast and Furious
+        <span class="feedback incorrecto">❌</span>
+      </label><br>
+      <label><input type="radio" name="color" id="incorrecto">Fast and Furious, F1 y Gran Turismo
+        <span class="feedback incorrecto">❌</span>
+      </label><br>
+      <label><input type="radio" name="color" id="correcto">Fast and Furious, F1, Gran Turismo Y Need for Speed
+        <span class="feedback correcto">✅</span>
+      </label><br>
+      <label><input type="radio" name="color" id="incorrecto">Ninguna es correcta
+        <span class="feedback incorrecto">❌</span>
+      </label><br>
     </form>
+  </div><br>
+  <div style="text-align: center; margin: 60px 0;">
+    <h3 style="color:#ff6b00;">💬 Únete al Chat en Vivo JDM World</h3>
+    <p>Charlas en tiempo real: meets en Sevilla, ayuda con mods, lives de eventos y más.</p>
+    <a class="btn-jdm" href="https://discord.gg/3SuNbMf36Y" target="_blank"
+      style="display:inline-block; background:#5865F2; color:white; padding:15px 40px; border-radius:50px; font-size:1.4em; text-decoration:none; font-weight:bold;">
+      🚗 Únete al Discord JDM World España
+    </a>
+    <p style="margin-top:15px;">
+      <a href="https://t.me/+TU_LINK_TELEGRAM" target="_blank">O únete al grupo Telegram alternativo</a>
+    </p>
+  </div><br>
+  <div style="text-align: center;">
+    <button onclick="juegoAdivinar()"
+      style="padding:15px; background:#ff6b00; color:white; border:none; border-radius:10px; font-size:1.2em; cursor:pointer;">
+      🎰 ¡Juega: Adivina el Número JDM!
+    </button>
   </div>
-  <p style="text-align: center; color: #aaa; font-size: 0.9em;">
-    Actualizado el 22 de diciembre de 2025 | ¿Tienes sugerencias? ¡Comenta abajo!
-  </p>
-  <section class="comentarios" style="background: #222; padding: 20px; border-radius: 15px; margin: 40px 0;">
-    <h3 style="color: #ff6b00;">¿Qué opinas? Deja tu comentario</h3>
-    <textarea id="comentario" placeholder="Ej: '¡El R34 es el rey!' (guarda en tu navegador)" rows="3"
-      style="width: 100%; border-radius: 3px; padding: 5px;"></textarea>
-    <button onclick="guardarComentario()"
-      style="margin-top: 10px; padding: 10px; background: #ff6b00; color: white; border: none; border-radius: 5px;">Guardar</button>
-    <div id="listaComentarios"></div>
-  </section>
   <div style="text-align: center; margin: 60px 0;">
     <details
       style="display: inline-block; background: #222; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(255,107,0,0.3);">
@@ -443,7 +426,7 @@
           Animaciones locas, colores chillones y todo hecho a mano.
         </p>
 
-        <a href="Mi web personal/Pagina 1.html" target="_blank" class="button button5"
+        <a href="Los Mejores Coches JDM .html" target="_blank" class="button button5"
           style="background: linear-gradient(45deg, #ff6b00, #c00); padding: 15px 30px; font-size: 1.2em; animation: pulse 2s infinite;">
           Ver mi web antigua (a tu propio riesgo 🚧)
         </a>
@@ -454,11 +437,7 @@
       </div>
     </details>
   </div>
-  <script src="session.js"></script>
-  <script src="theme.js"></script>
-  <script src="quiz.js"></script>
-  <script src="scroll.js"></script>
-  <script src="comments.js"></script>
+  <script src="Juego.js"></script>
 </body>
 
 </html>

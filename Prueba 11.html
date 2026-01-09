@@ -3,27 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDM World - Supra MK4</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
-    <!-- SEO avanzado 2025 -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Tu nick o nombre">
-
-    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
-    <meta property="og:title" content="JDM World - Nissan GT-R R34">
-    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
-    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
-    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
-    <meta property="og:type" content="article">
 </head>
 
 <body class="supra">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul id="menu">
+        <ul>
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -58,25 +46,19 @@
                     <a href="Prueba 14.html">Registrarse</a>
                 </div>
             </li>
-            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
-                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                <source src="Audios/bandoleros.ogg" type="audio/ogg">
                 Tu navegador no soporta audio.
             </audio>
-            <button id="audio-toggle" class="audio-btn">
-                🔊 Música ON
-            </button>
-            <button id="darkModeToggle"
-                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="gs">
         <img class="gs" src="Imagenes/logo supra.jpg" width="40%">
     </header>
     <i>
-        <h1>Toyota Supra</h1>
+        <h1 class="glitch">Toyota Supra</h1>
         <p class="pagina">
             El Toyota Supra (en japonés: トヨタ・スープラ Toyota Sūpura?) es un automóvil deportivo hatchback de 3 puertas,
             con
@@ -621,7 +603,7 @@
         </div>
     </section>
     <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DEL TOYOTA SUPRA === -->
-    <div style="margin: 80px 0; text-align: center;">
+    <div class="centrar card">
         <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
             Mi opinión personal sobre el Toyota Supra 🍊🏁
         </h2>
@@ -680,9 +662,6 @@
         <li><a href="Prueba 12.html">3</a></li>
         <li><a href="Prueba 12.html">&raquo;</a></li>
     </ol>
-    <div id="progressBar"></div>
-    <script src="session.js"></script>
-    <script src="scroll.js"></script>
 </body>
 
 </html>

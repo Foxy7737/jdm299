@@ -3,27 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDM World - Fast and Furious</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
-    <!-- SEO avanzado 2025 -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Tu nick o nombre">
-
-    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
-    <meta property="og:title" content="JDM World - Nissan GT-R R34">
-    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
-    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
-    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
-    <meta property="og:type" content="article">
 </head>
 
 <body class="fast">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul id="menu">
+        <ul>
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -58,18 +46,12 @@
                     <a href="Prueba 14.html">Registrarse</a>
                 </div>
             </li>
-            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
-        <div class="audio-player">
+        <div>
             <audio id="background-audio" loop>
-                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                <source src="Audios/bandoleros.ogg" type="audio/ogg">
                 Tu navegador no soporta audio.
             </audio>
-            <button id="audio-toggle" class="audio-btn">
-                🔊 Música ON
-            </button><br>
-            <button id="darkModeToggle"
-                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <div id="progressBar"></div>
@@ -78,7 +60,7 @@
     </header>
     <!--Este h1 es el titulo de la pagina wed y la i es el estilo de la letra que esta en cursiva-->
     <i>
-        <h1>Fast and Furious(franquicia)</h1>
+        <h1 class="neon-text glitch">Fast and Furious(franquicia)</h1>
     </i>
     <i>
         <p class="fondo-cielo pagina">Fast & Furious (también conocida como
@@ -281,7 +263,7 @@
         <li>Tess</li>
         <li>Isabel Neves</li>
     </ol>
-    <h2>Creación e inspiración</h2>
+    <h2 class="neon-text">Creación e inspiración</h2>
     <i>
         <p class="pagina">Los personajes fueron creados por el escritor y productor estadounidense Gary Scott
             Thompson,
@@ -291,7 +273,7 @@
             Li
         </p>
     </i>
-    <h2>Argumento</h2>
+    <h2 class="neon-text">Argumento</h2>
     <p class="titulo"><b>The Fast and the Furious</b></p>
     <i>
         <p class="fondo-cielo pagina">La saga se inicia con The Fast and the
@@ -524,10 +506,10 @@
             los eventos de Fast & Furious 6.</p>
     </i>
     <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Fast_%26_Furious_(franquicia)"
-            target="_blank" class="button button3">Wikipedia</a></div><br>
+            target="_blank" class="button button3 btn-neon">Wikipedia</a></div><br>
     <section class="opinion-visual">
-        <div class="opinion-texto">
-            <h2>Lo que significa Fast & Furious para mí</h2>
+        <div class="opinion-texto card">
+            <h2 class="neon-text">Lo que significa Fast & Furious para mí</h2>
             <p>
                 Fast & Furious fue una de las sagas que más me hizo amar los coches.
                 No solo por las carreras, sino por la idea de familia.
@@ -536,9 +518,6 @@
                 Mi parte favorita son las primeras películas, donde el tuning y las
                 carreras callejeras eran lo principal.
             </p>
-        </div>
-        <div class="opinion-imagen">
-            <img src="Imagenes/fast.jpg" alt="Nissan GT-R JDM">
         </div>
     </section>
     <div class="container" id="dotted">
@@ -583,8 +562,8 @@
         </form>
     </div><br>
     <!-- === MIS FAVORITOS Y VÍDEOS === -->
-    <div style="margin: 60px 0; text-align: center;">
-        <h2 style="color: #ff6b00; margin-bottom: 30px;">Mi opinión personal 🚀</h2>
+    <div class="centrar card">
+        <h2 class="neon-text" style="color: #ff6b00; margin-bottom: 30px;">Mi opinión personal 🚀</h2>
 
         <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.2em; line-height: 1.6;">
             Para mí, <strong>Fast & Furious</strong> no es solo carreras... es familia, lealtad y coches locos.<br>
@@ -630,9 +609,6 @@
         <li><a href="Prueba 6.html">5</a></li>
         <li><a href="Prueba 3.html">&raquo;</a></li>
     </ol>
-    <script src="session.js"></script>
-    <script src="quiz.js"></script>
-    <script src="scroll.js"></script>
 </body>
 
 </html>

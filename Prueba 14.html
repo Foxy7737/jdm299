@@ -3,20 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina wed sobre coches</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/x-icon">
     <link rel="stylesheet" href="Style.css">
-    <!-- SEO avanzado 2025 -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Tu nick o nombre">
-
-    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
-    <meta property="og:title" content="JDM World - Nissan GT-R R34">
-    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
-    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
-    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
-    <meta property="og:type" content="article">
 </head>
 
 <body>
@@ -49,11 +38,10 @@
                     <a href="Prueba 12.html">Toyota Celica</a>
                 </div>
             </li>
-            <li><a href="Prueba 13.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
-                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                <source src="Audios/bandoleros.ogg" type="audio/ogg">
                 Tu navegador no soporta audio.
             </audio>
             <button id="audio-toggle" class="audio-btn">
@@ -76,11 +64,11 @@
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required><br>
 
-            <label for="password1">Contraseña:</label>
-            <input type="password" id="password1" name="password1" required><br>
+            <label for="password1">Contraseña (mínimo 6 caracteres):</label>
+            <input type="password" id="password1" minlength="6" required><br>
 
-            <label for="password2">Repita la Contraseña:</label>
-            <input type="password" id="password2" name="password2" required>
+            <label for="password2">Repite la contraseña:</label>
+            <input type="password" id="password2" minlength="6" required><br>
 
             <p>¿Qué quieres ver en esta página web?</p>
             <input type="checkbox" id="vehicle1" name="intereses" value="Películas">
@@ -89,18 +77,40 @@
             <label for="vehicle2">Quiero ver videojuegos</label><br>
             <input type="checkbox" id="vehicle3" name="intereses" value="Coches">
             <label for="vehicle3">Quiero ver coches</label><br><br>
-
+            <div class="avatar-selection">
+                <label>Elige tu avatar JDM:</label>
+                <div class="avatars-grid">
+                    <label>
+                        <input type="radio" name="avatar" value="default" checked>
+                        <img src="Avatares/default.png" alt="Default" width="80">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="supra">
+                        <img src="Avatares/supra.png" alt="Supra" width="80">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="gtr">
+                        <img src="Avatares/gtr.png" alt="gtr" width="80">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="rx7">
+                        <img src="Avatares/rx7.jpg" alt="rx7" width="80">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="evo">
+                        <img src="Avatares/evo.png" alt="Evo" width="80">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="silvia">
+                        <img src="Avatares/silvia.png" alt="Silvia" width="80">
+                    </label>
+                    <!-- Añade más según los PNG que tengas -->
+                </div>
+            </div>
             <input type="submit" value="Enviar">
             <a href="Prueba 13.html" style="margin-left: 20px;">Iniciar Sesión</a>
         </form>
-    </div>
-    <!-- Lista de usuarios registrados guardados -->
-    <div id="listaRegistros" style="text-align: center;">
-        <h2>Usuarios registrados en este navegador (<span id="contador">0</span>)</h2>
-        <div id="registrosGuardados"></div>
-        <button class="borrar-todo" onclick="borrarTodos()">Borrar todos los registros</button>
-    </div>
-    <script src="14.js"></script>
+    </div><br><br>
 </body>
 
 </html>

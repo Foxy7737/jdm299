@@ -41,36 +41,6 @@ form {
     padding: 1%;
 }
 
-input[type=text],
-select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.imagenes:hover {
-    transform: scale(1.05);
-}
-
 /*El ha1 y el h2.cars los usa la pagina 3 que esta tematizada sobre cosas de cars*/
 h1.cars {
     text-decoration-line: underline;
@@ -372,12 +342,46 @@ img {
 }
 
 .container {
-    background-color: #2c2c2c;
-    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #222;
     border-radius: 10px;
-    box-shadow: 0 0 10px #000;
-    width: 400px;
-    margin: 0 auto;
+    box-shadow: 0 0 15px #ff6b00;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ff6b00;
+    border-radius: 5px;
+    background: #111;
+    color: #eee;
+}
+
+input[type="submit"] {
+    background: #ff6b00;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #c00;
+}
+
+/* Para quizzes */
+.quiz-form label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
 }
 
 /*Sirve para que el border se han puntos*/
@@ -449,6 +453,33 @@ h3.titulo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*Sirve para que el texto que de centrado*/
+section.pagina {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+ol,
+ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+/* Para opiniones personales y secciones con fondo */
+div[style*="background: #222"] {
+    border: 1px solid #ff6b00;
+    transition: box-shadow 0.3s;
+}
+
+div[style*="background: #222"]:hover {
+    box-shadow: 0 0 20px #ff6b00;
+}
+
 /*Sirve para que cunado tu lo visites, se pone de un color para saber que ya lo has visitado*/
 a.need:visited {
     color: tomato;
@@ -474,11 +505,49 @@ h2.coches {
 }
 
 /*Sirve para que la barra de navegación simpre la estes viendo*/
-nav.barra {
-    position: sticky;
+.barra {
+    position: fixed;
     top: 0;
-    padding: 0px;
-    z-index: 10;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.5);
+    /* Sombra neon */
+}
+
+.barra a:hover {
+    background: #ff6b00;
+    color: #000;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .barra ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra li {
+        margin: 10px 0;
+    }
 }
 
 /*Sirve para que si tu añades un header tenga una imagen de fondo*/
@@ -850,703 +919,6 @@ html {
     transform: translateY(0);
 }
 
-/* Retrasos escalonados */
-.personal:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.personal:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.favoritos {
-    transition-delay: 0.3s;
-}
-
-.opinion-visual {
-    transition-delay: 0.4s;
-}
-
-/* ===== MINI-JUEGO JDM ===== */
-
-/* Botón flotante del juego */
-.floating-game-btn {
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    background: linear-gradient(45deg, #ff0000, #ff6b00);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 25px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    animation: pulse-game 2s infinite;
-}
-
-.floating-game-btn:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
-    animation: none;
-}
-
-.floating-game-btn .btn-text {
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-@keyframes pulse-game {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-/* Modal del juego */
-.game-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 10000;
-    justify-content: center;
-    align-items: center;
-}
-
-.game-modal-content {
-    background: #111;
-    width: 90%;
-    max-width: 1000px;
-    border-radius: 20px;
-    border: 3px solid #ff6b00;
-    overflow: hidden;
-    box-shadow: 0 0 50px rgba(255, 107, 0, 0.5);
-    animation: modal-appear 0.5s ease;
-}
-
-@keyframes modal-appear {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.game-header {
-    background: linear-gradient(45deg, #222, #000);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ff6b00;
-}
-
-.game-header h2 {
-    color: #ff6b00;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
-    font-size: 28px;
-}
-
-.close-game {
-    background: #ff0000;
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.close-game:hover {
-    background: #ff6b00;
-    transform: rotate(90deg);
-}
-
-/* Pista de carreras */
-#race-track {
-    background: linear-gradient(to bottom, #2d3436, #1a1a1a);
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 5px solid #ff6b00;
-}
-
-.track {
-    position: relative;
-    height: 100%;
-    background: repeating-linear-gradient(90deg,
-            transparent,
-            transparent 50px,
-            #ff6b00 50px,
-            #ff6b00 52px);
-}
-
-.finish-line {
-    position: absolute;
-    right: 100px;
-    top: 0;
-    width: 10px;
-    height: 100%;
-    background: repeating-linear-gradient(to bottom,
-            #fff 0px,
-            #fff 20px,
-            #000 20px,
-            #000 40px);
-    z-index: 1;
-}
-
-.road-markings {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: repeating-linear-gradient(to right,
-            #fff 0px,
-            #fff 20px,
-            transparent 20px,
-            transparent 40px);
-    z-index: 0;
-}
-
-/* Coches */
-.player-car,
-.ai-car {
-    position: absolute;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
-    color: white;
-    transition: left 0.1s linear;
-    z-index: 2;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.player-car {
-    background: linear-gradient(45deg, #ff0000, #ff6b00);
-    bottom: 50px;
-    left: 50px;
-}
-
-.ai-car {
-    background: linear-gradient(45deg, #00a8ff, #0097e6);
-    bottom: 110px;
-    left: 50px;
-}
-
-#ai-car-1 {
-    background: linear-gradient(45deg, #00b894, #00a085);
-}
-
-#ai-car-2 {
-    background: linear-gradient(45deg, #e84118, #c23616);
-}
-
-#ai-car-3 {
-    background: linear-gradient(45deg, #8c7ae6, #7158e2);
-}
-
-.car-model {
-    position: absolute;
-    top: -25px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-size: 12px;
-    white-space: nowrap;
-}
-
-/* HUD del juego */
-.game-hud {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-bottom: 1px solid #333;
-}
-
-.hud-item {
-    text-align: center;
-    padding: 10px;
-    background: rgba(255, 107, 0, 0.1);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 107, 0, 0.3);
-}
-
-.hud-label {
-    display: block;
-    font-size: 12px;
-    color: #aaa;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
-.hud-value {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6b00;
-    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
-}
-
-.nitro-bar {
-    width: 100%;
-    height: 20px;
-    background: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.nitro-fill {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #00b894, #00ffaa);
-    border-radius: 10px;
-    transition: width 0.3s ease;
-}
-
-/* Controles del juego */
-.game-controls {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background: #1a1a1a;
-}
-
-.game-btn {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-width: 200px;
-}
-
-.start-btn {
-    background: linear-gradient(45deg, #00b894, #00a085);
-    color: white;
-}
-
-.start-btn:hover:not(:disabled) {
-    background: linear-gradient(45deg, #00a085, #00b894);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
-}
-
-.nitro-btn {
-    background: linear-gradient(45deg, #ff9f43, #ff6b00);
-    color: white;
-}
-
-.nitro-btn:hover:not(:disabled) {
-    background: linear-gradient(45deg, #ff6b00, #ff9f43);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
-}
-
-.game-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.control-info {
-    text-align: center;
-    color: #aaa;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-/* Selector de coche */
-.car-selector {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-top: 1px solid #333;
-}
-
-.car-selector h3 {
-    color: #ff6b00;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.cars-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.car-option {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.car-option:hover {
-    background: rgba(255, 107, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-.car-option.active {
-    border-color: #ff6b00;
-    background: rgba(255, 107, 0, 0.2);
-    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
-}
-
-.car-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.car-option span {
-    display: block;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* Notificación de desafío */
-.challenge-notification {
-    position: fixed;
-    top: 50px;
-    right: 20px;
-    background: linear-gradient(45deg, #222, #000);
-    border: 3px solid #ff6b00;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
-    z-index: 10001;
-    display: none;
-    animation: slide-in 0.5s ease;
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.challenge-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.challenge-icon {
-    font-size: 50px;
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.challenge-text h3 {
-    color: #ff6b00;
-    margin: 0 0 5px 0;
-}
-
-.challenge-text p {
-    color: #aaa;
-    margin: 0;
-}
-
-.challenge-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.challenge-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.challenge-btn.accept {
-    background: #00b894;
-    color: white;
-}
-
-.challenge-btn.decline {
-    background: #e84118;
-    color: white;
-}
-
-.challenge-btn:hover {
-    transform: scale(1.1);
-}
-
-/* Efectos del juego */
-@keyframes nitro-burst {
-    0% {
-        filter: brightness(1);
-    }
-
-    50% {
-        filter: brightness(2);
-    }
-
-    100% {
-        filter: brightness(1);
-    }
-}
-
-.nitro-active {
-    animation: nitro-burst 0.5s ease;
-}
-
-@keyframes finish-line {
-    0% {
-        filter: brightness(1);
-    }
-
-    50% {
-        filter: brightness(3);
-    }
-
-    100% {
-        filter: brightness(1);
-    }
-}
-
-.finish-crossed {
-    animation: finish-line 1s ease;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .game-hud {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .game-controls {
-        flex-direction: column;
-    }
-
-    .cars-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .floating-game-btn .btn-text {
-        display: none;
-    }
-}
-
-.feedback {
-    margin-left: 10px;
-    font-size: 1.2em;
-}
-
-/* Menú hamburguesa para móviles */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #ff6b00;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .barra ul {
-        flex-direction: column;
-        display: none;
-    }
-
-    .barra ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-}
-
-body.dark {
-    background: #111;
-    color: #ddd;
-}
-
-body.dark .barra {
-    background: #000;
-}
-
-body.dark a {
-    color: #ff6b00;
-}
-
-/* Botón Volver Arriba - Estilo JDM */
-#btnVolverArriba {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(45deg, #ff6b00, #c00);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    z-index: 1000;
-    text-align: center;
-}
-
-#btnVolverArriba.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    text-align: center;
-}
-
-#btnVolverArriba:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.8);
-    animation: pulse 1.5s infinite;
-    text-align: center;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
-    }
-}
-
-#progressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background: linear-gradient(90deg, #ff6b00, #c00);
-    z-index: 9999;
-    transition: width 0.2s ease;
-    box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
-}
-
-/* Loader JDM full screen */
-#jdmLoader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity 0.8s ease;
-}
-
-#jdmLoader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease, visibility 1s;
-}
-
-/* Coche neón animado (usa un GIF o SVG simple) */
-.neon-car {
-    width: 300px;
-    height: 150px;
-    background: url('/Imagenes/skyline.gif') center/cover no-repeat;
-    /* Cambia por tu GIF JDM */
-    filter: drop-shadow(0 0 20px #ff6b00);
-    animation: drift 4s infinite linear;
-}
-
-@keyframes drift {
-    0% {
-        transform: translateX(-100px) rotate(-5deg);
-    }
-
-    50% {
-        transform: translateX(100px) rotate(5deg);
-    }
-
-    100% {
-        transform: translateX(-100px) rotate(-5deg);
-    }
-}
-
 /* Texto neón */
 .loading-text {
     color: #ff6b00;
@@ -1569,31 +941,195 @@ body.dark a {
     }
 }
 
-/* Barra de progreso nitro */
-.progress-bar {
-    width: 300px;
-    height: 10px;
-    background: #333;
-    border-radius: 5px;
-    overflow: hidden;
+/*Letras neón*/
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 5px #ff6b00,
+        0 0 10px #ff6b00,
+        0 0 20px #ff6b00,
+        0 0 40px #ff6b00,
+        0 0 80px #ff6b00;
+    animation: flicker 3s infinite alternate;
 }
 
-.progress-bar::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #ff6b00, #c00);
-    animation: loading 3s infinite;
-    box-shadow: 0 0 20px #ff6b00;
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
-@keyframes loading {
+/*Esto es para poder centrar el texto*/
+.centrar {
+    text-align: center;
+}
+
+/*Esto es para el auduio de la pagina*/
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.audio-btn {
+    background: #ff6b00;
+    color: #000;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*Son cards para mis opiniones personales*/
+.card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.2);
+    border: 1px solid #ff6b00;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 107, 0, 0.4);
+}
+
+/*Esto es para botones espaciales*/
+.btn-jdm {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b00, #c00);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #ff6b00;
+    transition: all 0.3s;
+}
+
+.btn-jdm:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff6b00;
+}
+
+/*Esto es para que el titulo tenga glich*/
+.glitch {
+    position: relative;
+    color: #ff6b00;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
     0% {
-        width: 0%;
+        text-shadow: 2px 0 #f00, -2px 0 #0ff;
+    }
+
+    20% {
+        text-shadow: -2px 0 #f00, 2px 0 #0ff;
+    }
+
+    40% {
+        text-shadow: 2px 0 #0f0;
     }
 
     100% {
-        width: 100%;
+        text-shadow: none;
+    }
+}
+
+/*Botones con fondo neon*/
+.btn-neon {
+    background: transparent;
+    border: 2px solid #ff6b00;
+    color: #ff6b00;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff6b00;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-neon:hover {
+    background: #ff6b00;
+    color: #000;
+    box-shadow: 0 0 30px #ff6b00;
+}
+
+.btn-neon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.3) 0%, transparent 70%);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.btn-neon:hover::before {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/*Esto es para scan o hud*/
+.hud-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b00, transparent);
+    margin: 30px auto;
+    width: 60%;
+    box-shadow: 0 0 10px #ff6b00;
+    animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/*Esto es para el carrusel de coches*/
+.carousel-container {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.coche-slide {
+    min-width: 400px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }

@@ -3,20 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina wed sobre coches</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
-    <!-- SEO avanzado 2025 -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Tu nick o nombre">
-
-    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
-    <meta property="og:title" content="JDM World - Nissan GT-R R34">
-    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
-    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
-    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
-    <meta property="og:type" content="article">
 </head>
 
 <body>
@@ -49,11 +38,10 @@
                     <a href="Prueba 12.html">Toyota Celica</a>
                 </div>
             </li>
-            <li><a href="Prueba 13.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
-                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                <source src="Audios/bandoleros.ogg" type="audio/ogg">
                 Tu navegador no soporta audio.
             </audio>
             <button id="audio-toggle" class="audio-btn">
@@ -62,6 +50,18 @@
             <button id="darkModeToggle"
                 style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
+    </nav>
+    <div class="audio-player">
+        <audio id="background-audio" loop>
+            <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+            Tu navegador no soporta audio.
+        </audio>
+        <button id="audio-toggle" class="audio-btn">
+            🔊 Música ON
+        </button>
+        <button id="darkModeToggle"
+            style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
+    </div>
     </nav><br>
     <div class="container" id="dotted">
         <h2>Iniciar Sesión</h2>
@@ -71,8 +71,9 @@
             <input type="text" id="fname" placeholder="Nombre de Usuario" required>
 
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" placeholder="Tu contraseña" required>
-
+            <input type="password" id="password" placeholder="Tu contraseña" required><br><br>
+            <input type="checkbox" id="recordarme" checked>
+            <label for="recordarme">Recordarme en este dispositivo</label><br><br>
             <input type="submit" value="Entrar">
         </form>
 
@@ -81,11 +82,9 @@
         <a href="Prueba 14.html">¿No tienes cuenta? Regístrate aquí</a>
     </div>
 
-    <div style="text-align: center; margin-top: 40px;">
+    <div class="centrar"><br>
         <img src="Imagenes/gracias2.gif" width="30%">
     </div>
-    <script src="13.js"></script>
-    <script src="session.js"></script>
 </body>
 
 </html>
