@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>JDM World - Coches Japoneses, Películas y Videojuegos</title>
+    <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <nav class="barra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Peliculas</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 2.html">Fast and the Furious</a>
+                    <a href="Prueba 3.html">Cars</a>
+                    <a href="Prueba 4.html">Need for Speed</a>
+                    <a href="Prueba 5.html">Gran Turismo</a>
+                    <a href="Prueba 6.html">F1</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn">Videojuegos</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 7.html">Need for Speed</a>
+                    <a href="Prueba 8.html">Gran Turismo</a>
+                    <a href="Prueba 9.html">F1</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn">Coches</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 10.html">Nissan GT-R</a>
+                    <a href="Prueba 11.html">Toyota Supra</a>
+                    <a href="Prueba 12.html">Toyota Celica</a>
+                </div>
+            </li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Usuario</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 13.html">Iniciar Sesión</a>
+                    <a href="Prueba 14.html">Registrarse</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br><br><br>
+    <div class="calculadora">
+        <div class="centrar">
+            <input type="text" id="pantalla" disabled>
+        </div><br>
+        <div class="centrar">
+            <button onclick="calcular()" class="boton" id="igual">=</button>
+            <button id="boton-invisible">aaa</button>
+            <button class="limpiar" onclick="limpiar()" id="borrar">Borrar</button>
+        </div><br>
+        <div class="centrar">
+            <button onclick="agregar('1')">1</button>
+            <button onclick="agregar('2')">2</button>
+            <button onclick="agregar('3')">3</button>
+            <button id="boton-invisible"></button>
+            <button onclick="agregar('-')" class="data-operador">-</button>
+        </div><br>
+        <div class="centrar">
+            <button onclick="agregar('4')">4</button>
+            <button onclick="agregar('5')">5</button>
+            <button onclick="agregar('6')">6</button>
+            <button id="boton-invisible"></button>
+            <button onclick="agregar('+')" class="data-operador">+</button>
+        </div><br>
+        <div class="centrar">
+            <button onclick="agregar('7')">7</button>
+            <button onclick="agregar('8')">8</button>
+            <button onclick="agregar('9')">9</button>
+            <button id="boton-invisible"></button>
+            <button onclick="agregar('*')" class="data-operador">*</button>
+        </div><br>
+        <div class="centrar">
+            <button id="boton-invisible">a</button>
+            <button onclick="agregar('0')">0</button>
+            <button id="boton-invisible">loloo</button>
+            <button onclick="agregar('/')" class="data-operador">/</button>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>

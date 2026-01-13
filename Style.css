@@ -350,33 +350,6 @@ img {
     box-shadow: 0 0 15px #ff6b00;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ff6b00;
-    border-radius: 5px;
-    background: #111;
-    color: #eee;
-}
-
-input[type="submit"] {
-    background: #ff6b00;
-    color: #000;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-input[type="submit"]:hover {
-    background: #c00;
-}
-
 /* Para quizzes */
 .quiz-form label {
     display: block;
@@ -1106,30 +1079,48 @@ html {
     }
 }
 
-/*Esto es para el carrusel de coches*/
-.carousel-container {
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 50px auto;
+/*Eso es para la calculadora*/
+#boton-invisible {
+    visibility: hidden;
 }
 
-.carousel-track {
-    display: flex;
-    animation: scroll-left 20s linear infinite;
+button {
+    background-color: grey;
+    color: white;
 }
 
-.coche-slide {
-    min-width: 400px;
-    text-align: center;
-    margin: 0 20px;
+button:hover {
+    background-color: #d0d0d0;
 }
 
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
+button:active {
+    background-color: #bbbbbb;
+}
 
-    100% {
-        transform: translateX(-100%);
-    }
+/* Estilo especial para operadores */
+button.data-operador {
+    background-color: grey;
+    color: white;
+}
+
+button.data-operador:hover {
+    background-color: #e08500;
+}
+
+button#igual {
+    background-color: grey;
+    color: white;
+}
+
+button#igual:hover {
+    background-color: #218838;
+}
+
+button#borrar {
+    background-color: grey;
+    color: white;
+}
+
+button#borrar:hover {
+    background-color: #c82333;
 }

@@ -39,6 +39,7 @@
           <a href="Prueba 12.html">Toyota Celica</a>
         </div>
       </li>
+      <li><a href="Calculadora.html">Calculadora</a></li>
       <li class="dropdown">
         <a class="dropbtn">Usuario</a>
         <div class="dropdown-content">
@@ -52,7 +53,16 @@
   <div id="personalizado" style="text-align: center; margin: 20px 0;"></div>
   <header class="inicio">
     <img class="jdm" src="Imagenes/logo jdm.png" width="30%">
-  </header>
+  </header><br>
+  <h2 class="centrar" id="usuario"></h2>
+  <p class="centrar" id="subtitulo"></p>
+  <p class="centrar" id="coches"></p>
+  <div class="centrar">
+    <button onclick="datosUsuario()">Escribe tus datos</button>
+  </div><br>
+  <div class="centrar">
+    <button onclick="datosCoches()">Escribe los coches que te gustan</button>
+  </div>
   <!--Este h1 es el titulo de la pagina wed y la i es el estilo de la letra que esta en cursiva-->
   <i>
     <h1 class="glitch">Japanese domestic market(JDM)</h1>
@@ -298,25 +308,6 @@
       </td>
     </tr>
   </table>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="coche-slide">
-        <img src="https://hips.hearstapps.com/hmg-prod/images/image-2-6426a46bb3e23.jpg?crop=0.8884775566867191xw:1xh;center,top&resize=1200:*" width="55%" alt="R34">
-        <h3>Nissan GT-R R34</h3>
-        <a href="Prueba 10.html" class="btn-jdm">VER BESTIA →</a>
-      </div>
-      <div class="coche-slide">
-        <img src="https://files.hodoor.world/main/dfefa2fc-519e-43d9-993b-7b8b75a6f724.jpeg" width="75%" alt="Supra">
-        <h3>Toyota Supra MK4</h3>
-        <a href="Prueba 11.html" class="btn-jdm">2JZ POWER →</a>
-      </div>
-     <div class="coche-slide">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzzoIRdPYio5mtLOIfeuXp3JuLIiyOPx3UQ&s" width="75%" alt="Supra">
-        <h3>Toyota Celica</h3>
-        <a href="Prueba 12.html" class="btn-jdm">Ver coche →</a>
-      </div>
-    </div>
-  </div>
   <h3>
     <p>Estos son algunos temas que hay en la web:</p>
   </h3>
@@ -437,7 +428,7 @@
       </div>
     </details>
   </div>
-  <script src="Juego.js"></script>
+  <script src="Script.js"></script>
 </body>
 
 </html>
